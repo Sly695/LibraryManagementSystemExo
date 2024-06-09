@@ -1,0 +1,49 @@
+Bien sûr ! Voici l'exercice sans les solutions complètes.
+
+### Exercice : Système de Gestion d'une Bibliothèque
+
+#### Contexte
+Vous devez créer un système de gestion pour une bibliothèque. La bibliothèque contient des livres, des magazines et des journaux. Chaque type de publication a des caractéristiques communes et spécifiques. Il doit également être possible d'emprunter et de retourner des publications. Un système de gestion des emprunts doit être mis en place pour suivre quels membres ont emprunté quelles publications.
+
+#### Objectifs
+1. Créer une classe abstraite `Publication` avec les caractéristiques communes à toutes les publications.
+2. Créer des classes concrètes `Book`, `Magazine` et `Newspaper` qui héritent de `Publication`.
+3. Créer une interface `Borrowable` avec des méthodes pour emprunter et retourner des publications.
+4. Implémenter l'interface `Borrowable` dans les classes appropriées.
+5. Créer une classe `Member` pour représenter un membre de la bibliothèque.
+6. Créer une classe `Library` pour gérer les publications et les emprunts.
+
+#### Spécifications
+
+1. **Classe Abstraite `Publication`** :
+   - Attributs : `title`, `publicationDate`
+   - Méthodes abstraites : `printDetails()`
+
+2. **Classe `Book`** :
+   - Attributs supplémentaires : `author`, `isbn`
+   - Méthode `printDetails()` doit afficher toutes les informations sur le livre
+
+3. **Classe `Magazine`** :
+   - Attributs supplémentaires : `issueNumber`
+   - Méthode `printDetails()` doit afficher toutes les informations sur le magazine
+
+4. **Classe `Newspaper`** :
+   - Attributs supplémentaires : `editor`
+   - Méthode `printDetails()` doit afficher toutes les informations sur le journal
+
+5. **Interface `Borrowable`** :
+   - Méthodes : `borrow()`, `returnItem()`, `isBorrowed()`
+
+6. **Implémentation de `Borrowable`** :
+   - `Book` et `Magazine` peuvent être empruntés
+   - `Newspaper` ne peut pas être emprunté
+
+7. **Classe `Member`** :
+   - Attributs : `name`, `memberId`, `borrowedItems` (liste de publications empruntées)
+   - Méthodes : `borrowItem(Publication item)`, `returnItem(Publication item)`, `printBorrowedItems()`
+
+8. **Classe `Library`** :
+   - Attributs : `catalog` (liste de toutes les publications), `members` (liste de tous les membres)
+   - Méthodes : `addPublication(Publication item)`, `addMember(Member member)`, `borrowItem(Member member, Publication item)`, `returnItem(Member member, Publication item)`, `printCatalog()`, `printMembers()`
+
+L'objectif de cet exercice est de vous familiariser avec les concepts de l'héritage, du polymorphisme, des interfaces, des classes abstraites, et de l'encapsulation en Java. Vous devrez créer des classes qui héritent de classes abstraites, implémentent des interfaces, et travaillent ensemble pour former un système de gestion de bibliothèque fonctionnel.
